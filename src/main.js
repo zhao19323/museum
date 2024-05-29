@@ -5,7 +5,6 @@ import VRHall from "./vrhall";
 import { data } from "./pictures2";
 import Zoomtastic from "zoomtastic";
 
-// 因为模型所需，正常的gltf模型是不需要手动设置贴图的，这里是网上找的模型
 import * as m from "./materls";
 
 window.onload = function () {
@@ -41,7 +40,6 @@ window.onload = function () {
       console.log("加载进度", p);
     },
   }).then((gltf) => {
-    // 正常gltf模型无需设置这些参数，因为网上找的模型，直接拷贝过来的代码
     gltf.scene.traverse(function (child) {
       if (child.isMesh) {
         // ...
